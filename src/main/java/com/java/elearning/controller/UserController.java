@@ -33,8 +33,8 @@ public class UserController {
 	
 	@PostMapping("")
 	public void addUser(@RequestBody User user, HttpServletResponse res) {
-		this.db.save(user);
 		res.setStatus(201);
+		this.db.save(user);
 	}
 	
 	@GetMapping("/{id}")

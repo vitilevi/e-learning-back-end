@@ -30,7 +30,7 @@ public class AdminController {
 	}
 	
 	@PostMapping("")
-	public void addUser(@RequestBody Admin admin, HttpServletResponse res) {
+	public void addAdmin(@RequestBody Admin admin, HttpServletResponse res) {
 		this.db.save(admin);
 		res.setStatus(201);
 	}
